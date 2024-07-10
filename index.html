@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+
+    <!-- Tailwind CSS -->
+    <link rel="stylesheet" href="./static/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+</head>
+
+<body onload="imageSearch()">
+
+    <!-- Heading and Input Start  -->
+    <div id="main-bar" class="max-w-full pt-8 pb-4">
+        <h1 class="text-4xl font-bold mb-4 text-center text-white">Image Gallery Using Unsplash</h1>
+        <div id="search" class="flex mx-2 lg:mx-52">
+            <input type="text" id="search-value" class="flex-grow p-2 lg:pl-4 border rounded-l"
+                placeholder="Enter search term">
+            <button class="search bg-blue-700 text-white p-1 sm:p-4 md:p-4 lg:p-4 rounded-r">Search</button>
+        </div>
+    </div>
+    <!-- Heading and Input End  -->
+
+
+    <!-- Images Display Start  -->
+    <div id="images-container" class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4 lg:px-40 lg:py-10">
+        <!-- Images will be displayed here -->
+    </div>
+    <!-- Images Display End  -->
+
+    <!-- Load more Image Start -->
+    <div id="load-more" class="hidden text-center mt-4 mb-10">
+        <button class="bg-blue-500 text-white p-2 rounded">Load More</button>
+    </div>
+    <!-- Load more Image End -->
+
+    <!-- Image Not Found Start -->
+    <div id="image-not-found" class="hidden">
+        <!-- Graphic from https://www.opendoodles.com/ -->
+        <div class="grid mt-10 place-content-center px-4">
+            <div class="text-center">
+                <img src="./static/404.png" alt="" class="mx-auto h-56 w-auto text-black sm:h-64">
+                <h1 class="mt-4 text-2xl font-bold tracking-tight text-gray-900 sm:text-4xl">Uh-oh!</h1>
+                <p class="mt-4 text-gray-500 text-lg">We can't find any iamges.</p>
+            </div>
+        </div>
+    </div>
+    <!-- Image Not Found End -->
+
+    <!-- Loading Spinner Start -->
+    <div id="spinner" class="hidden">
+        <div class="flex items-center justify-center mt-10">
+            <div class="relative">
+                <div class="h-24 w-24 rounded-full border-t-8 border-b-8 border-gray-200"></div>
+                <div
+                    class="absolute top-0 left-0 h-24 w-24 rounded-full border-t-8 border-b-8 border-blue-500 animate-spin">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Loading Spinner End -->
+
+    <script src="main.js"></script>
+</body>
+
+</html>

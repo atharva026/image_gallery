@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
+
+body{
+    font-family: "JetBrains Mono", monospace;
+}
+
+#main-bar{
+    background-image: linear-gradient(to top, #4481eb 0%, #04befe 100%)
+}
